@@ -1,0 +1,16 @@
+# Auto-detect text files and normalize to LF in the repo
+* text=auto
+
+# Ensure shell scripts stay LF
+*.sh text eol=lf
+
+# Force key files to LF
+*.gitattributes text eol=lf
+*.gitignore  text eol=lf
+
+# Force JSON, HTML, CSS, TS(X) to LF
+*.json  text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
