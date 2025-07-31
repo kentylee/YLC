@@ -1,74 +1,95 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# YL Cleaning & Contracting Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project is a professional, responsive website for **YL Cleaning & Contracting**, built to showcase cleaning and contracting services with a luxury, minimalistic aesthetic inspired by high-end brands.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Motivation
 
-## Expanding the ESLint configuration
+I tackled this project to:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Practice modern web development** with React, Vite, and TypeScript.
+* **Master utility‑first styling** using Tailwind CSS.
+* **Solidify my understanding of version control** and GitHub workflows.
+* **Implement continuous integration and deployment (CI/CD)** via GitHub Actions and Vercel.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## What I Learned
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Git & GitHub**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+   * Initialized repositories, wrote meaningful commit messages, managed `.gitignore` and `.gitattributes` for cross‑platform consistency.
+   * Created branches for feature work and merged via pull requests.
+
+2. **React & TypeScript**
+
+   * Built a component‑based UI structure with React Router for multi‑page navigation.
+   * Enforced type safety with TypeScript, and learned to resolve case‑sensitive import issues.
+
+3. **Tailwind CSS**
+
+   * Configured Tailwind with Vite: set up `tailwind.config.ts`, PostCSS plugin, and VS Code IntelliSense.
+   * Developed custom themes (fonts, colors) and responsive layouts with utility classes.
+
+4. **CI/CD**
+
+   * Wrote a GitHub Actions workflow to lint and build on each push/PR.
+   * Deployed automatically to Vercel with zero‑configuration builds.
+
+## Project Structure
+
+```
+client/
+├─ public/              # Static assets (logo, images)
+├─ src/
+│  ├─ assets/           # Image imports (if any)
+│  ├─ components/       # Reusable UI components (Navbar, Layout, Logo)
+│  ├─ pages/            # Route components (Home, Services, Pricing, Contact, Reviews, About)
+│  ├─ index.css         # Tailwind directives & font imports
+│  ├─ main.tsx          # React entry point with BrowserRouter
+│  └─ App.tsx           # Route definitions wrapped in Layout
+├─ tailwind.config.ts   # Tailwind configuration and content paths
+├─ postcss.config.js    # PostCSS plugins (Tailwind, Autoprefixer)
+├─ tsconfig.json        # TypeScript compiler options
+└─ .github/workflows/   # CI pipeline definitions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# YLC
-Full Stack Website Project for a Cleaning Company
->>>>>>> 3c897573b6162f4c78273da0f806be16d3487888
+   ```bash
+   git clone https://github.com/kentylee/YLC.git
+   cd YLC/client
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+
+   ```bash
+   npm run build
+   ```
+
+5. **Preview the production build**
+
+   ```bash
+   npm run preview
+   ```
+
+## Deployment
+
+This site is deployed on [Vercel](https://vercel.com) and will automatically redeploy on every push to `main`.
+
+## License
+
+This project is provided for learning and demonstration purposes.
